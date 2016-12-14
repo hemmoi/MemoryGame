@@ -13,7 +13,7 @@ img {
 }
 
 .Game {
-  background-color:  	#dfe3ee;
+  background-color: #bbeeff;
   width: 33rem;
 }
 
@@ -22,12 +22,12 @@ img {
   margin: 1rem;
   border: 1px solid black;
   text-align: center;
-  background-color: grey;
+  background-color: #3366ff;
 
 
   // .Card--flipped
   &--flipped  {
-    background-color: gray;
+    background-color: #77aaff;
   }
 
   // .Card--matched
@@ -39,7 +39,7 @@ img {
 
 .page-title {
   text-align: center;
-  background-color: #8b9dc3;
+  background-color: #77aaff;
   color: $title-color;
   margin-top: $space-large;
   border: 2px solid black;
