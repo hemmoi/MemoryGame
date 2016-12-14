@@ -13,7 +13,9 @@ var Card = React.createClass({
         "http://pngimg.com/upload/dog_PNG2422.png",
         "http://pngimg.com/upload/cat_PNG106.png",
         "http://pngimg.com/upload/parrot_PNG723.png",
-        "http://pngimg.com/upload/small/pig_PNG2210.png"
+        "http://pngimg.com/upload/small/pig_PNG2210.png",
+        "http://pngimg.com/upload/cow_PNG2132.png",
+        "http://pngimg.com/upload/rabbit_PNG5638.png"
     ];
 
     var classes = Classnames(

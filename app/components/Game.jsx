@@ -5,20 +5,39 @@ var Game = React.createClass ({
 
   initialCards: function () {
     return [
+     {value: 1, matched: false, flipped: false},
+     {value: 1, matched: false, flipped: false},
      {value: 2, matched: false, flipped: false},
-     {value: 4, matched: false, flipped: false},
-     {value: 1, matched: false, flipped: false},
-     {value: 1, matched: false, flipped: false},
+     {value: 2, matched: false, flipped: false},
+     {value: 3, matched: false, flipped: false},
      {value: 3, matched: false, flipped: false},
      {value: 4, matched: false, flipped: false},
-     {value: 2, matched: false, flipped: false},
-     {value: 3, matched: false, flipped: false}
+     {value: 4, matched: false, flipped: false},
+     {value: 5, matched: false, flipped: false},
+     {value: 5, matched: false, flipped: false},
+     {value: 6, matched: false, flipped: false},
+     {value: 6, matched: false, flipped: false}
    ]
+ },
+
+ shuffleCards: function (array) {
+   var currentIndex = array.length, temporaryValue, randomIndex;
+  // While there remain elements to shuffle...
+   while (0 !== currentIndex) {
+     // Pick a remaining element...
+     randomIndex = Math.floor(Math.random() * currentIndex);
+     currentIndex -= 1;
+     // And swap it with the current element.
+     temporaryValue = array[currentIndex];
+     array[currentIndex] = array[randomIndex];
+     array[randomIndex] = temporaryValue;
+   }
+   return array;
  },
 
   getInitialState: function () {
     return {
-      cards: this.initialCards(),
+      cards: this.shuffleCards(this.initialCards()),
       lastCard: null,
       locked: false,
       matches: 0
@@ -73,7 +92,7 @@ var Game = React.createClass ({
 
   reset: function () {
     this.setState({
-      cards: this.initialCards(),
+      cards: this.shuffleCards(this.initialCards()),
       lastCard: null,
       locked: false,
       matches: 0
