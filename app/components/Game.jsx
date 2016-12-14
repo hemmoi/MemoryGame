@@ -57,13 +57,16 @@ var Game = React.createClass ({
   renderCards: function (cards) {
     return cards.map((card, index) => {
       return (
-        <Card
-          key={index}
-          value={card.value}
-          id={index}
-          matched={card.matched}
-          flipped={card.flipped}
-          checkMatch={this.checkMatch} />
+        <div>
+          <Card
+            key={index}
+            value={card.value}
+            id={index}
+            matched={card.matched}
+            flipped={card.flipped}
+            checkMatch={this.checkMatch}>
+        </Card>
+        </div>
       );
     });
   },
@@ -84,10 +87,9 @@ var Game = React.createClass ({
     }
     return (
       <div className="Game">
-        <div>
-          <button onClick={this.reset}>{btnText}</button>
-        </div>
+        <h1 className="page-title expanded">Memory Game</h1>
         {this.renderCards(this.state.cards)}
+        <button className="button expanded" onClick={this.reset}>{btnText}</button>
       </div>
     );
   }

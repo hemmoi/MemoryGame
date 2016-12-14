@@ -25,9 +25,10 @@ module.exports = {
       Main: 'app/components/Main.jsx',
       Game: 'app/components/Game.jsx',
       Card: 'app/components/Card.jsx',
-      applicationStyles: 'app/styles/app.scss'
+      applicationStyles: 'app/styles/app.scss',
+      cardBackground: 'app/styles/barocco.jpg'
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.jpg', 'png']
   },
   module: {
     loaders: [
@@ -38,6 +39,11 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /{node_modules|bower_components}/
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        loader: 'url',
+        query: { limit: 25000 }
       }
     ]
   },

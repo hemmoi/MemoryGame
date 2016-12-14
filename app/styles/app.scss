@@ -1,18 +1,32 @@
+$space-large: 2.5rem;
+$title-color: black;
+
+body {
+  width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+img {
+  width: 6rem;
+  height: 6rem ;
+}
+
 .Game {
+  background-color:  	#dfe3ee;
+  width: 33rem;
 }
 
 .Card {
   float: left;
-  width: 4rem;
-  height: 8rem;
-  padding: 1rem;
   margin: 1rem;
   border: 1px solid black;
   text-align: center;
-  background-color: black;
+  background-color: grey;
+
 
   // .Card--flipped
-  &--flipped {
+  &--flipped  {
     background-color: gray;
   }
 
@@ -20,4 +34,15 @@
   &--matched {
     background-color: green;
   }
+}
+
+
+.page-title {
+  text-align: center;
+  background-color: #8b9dc3;
+  color: $title-color;
+  margin-top: $space-large;
+  border: 2px solid black;
+  font-size: 3rem;
+  font-weight: bold;
 }
