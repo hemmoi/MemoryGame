@@ -102,7 +102,7 @@ var Game = React.createClass ({
   render: function() {
     var btnText = 'Reset';
     if (this.state.matches === this.state.cards.length / 2) {
-      btnText = 'You Win! Play Again?';
+      btnText = 'Play Again?';
     }
     return (
       <div className="Game">
