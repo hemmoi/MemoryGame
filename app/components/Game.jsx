@@ -102,6 +102,7 @@ var Game = React.createClass ({
   render: function() {
     var btnText = 'Reset';
     if (this.state.matches === this.state.cards.length / 2) {
+      confirm('Hauskaa Joulua Anulle!!!');
       btnText = 'Play Again?';
     }
     return (

@@ -15,7 +15,7 @@ var Card = React.createClass({
         "http://pngimg.com/upload/parrot_PNG723.png",
         "http://pngimg.com/upload/small/pig_PNG2210.png",
         "http://pngimg.com/upload/cow_PNG2132.png",
-        "http://pngimg.com/upload/rabbit_PNG5638.png",
+        "http://www.clipartbest.com/cliparts/ncX/Lyo/ncXLyoBcB.png",
         "https://s-media-cache-ak0.pinimg.com/564x/5c/d1/2d/5cd12dede90464b6d0200ab43dd46e41.jpg"
     ];
 
