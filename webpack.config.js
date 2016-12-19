@@ -25,6 +25,7 @@ module.exports = {
       Main: 'app/components/Main.jsx',
       Game: 'app/components/Game.jsx',
       Card: 'app/components/Card.jsx',
+      MessageModal: 'app/components/MessageModal.jsx',
       applicationStyles: 'app/styles/app.scss',
       cardBackground: 'app/styles/barocco.jpg'
     },

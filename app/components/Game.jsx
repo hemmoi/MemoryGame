@@ -1,5 +1,6 @@
 var React = require('react');
 var Card = require ('Card');
+var MessageModal = require('MessageModal');
 
 var Game = React.createClass ({
 
@@ -99,20 +100,29 @@ var Game = React.createClass ({
     });
   },
 
+
+
   render: function() {
     var btnText = 'Reset';
-    if (this.state.matches === this.state.cards.length / 2) {
-      confirm('Hauskaa Joulua Anulle!!!');
-      btnText = 'Play Again?';
+    var that = this;
+
+    function renderMessage () {
+      if (that.state.matches === that.state.cards.length / 2) {
+        return (
+          <MessageModal/>
+        );
+      }
     }
+
     return (
       <div className="Game">
         <h1 className="page-title expanded">Memory Game</h1>
         {this.renderCards(this.state.cards)}
         <button className="button expanded" onClick={this.reset}>{btnText}</button>
+        {renderMessage()}
       </div>
-    );
-  }
-});
+      );
+    }
+  });
 
 module.exports = Game;
